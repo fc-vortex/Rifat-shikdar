@@ -3,83 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday Shredder!</title>
+    <title>Happy Birthday | The Legend of Thunderstrike</title>
     <style>
-        body {
-            background-color: #0f0f0f;
-            color: #e0e0e0;
-            font-family: 'Courier New', Courier, monospace;
-            text-align: center;
-            margin: 0;
-            padding: 0;
+        :root {
+            --primary: #00d4ff; /* Electric Blue for Thunderstrike */
+            --gold: #ffd700;
+            --dark: #0a0a0a;
         }
-        .container {
-            padding: 100px 20px;
+        body {
+            background-color: var(--dark);
+            color: #ffffff;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            text-align: center;
+        }
+        .hero {
+            padding: 80px 20px;
             background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), 
-                        url('https://images.unsplash.com/photo-1510915361894-db8b60106cb1?q=80&w=1200');
+                        url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=1200'); /* Stadium background */
             background-size: cover;
-            min-height: 80vh;
+            border-bottom: 5px solid var(--primary);
         }
         h1 {
-            color: #ff4500;
-            font-size: 4rem;
+            font-size: 3.5rem;
+            margin: 0;
+            color: var(--primary);
             text-transform: uppercase;
-            letter-spacing: 5px;
-            margin-bottom: 10px;
-            text-shadow: 3px 3px #000;
+            text-shadow: 0 0 20px rgba(0, 212, 255, 0.6);
         }
-        .birthday-text {
-            font-size: 1.5rem;
-            color: #ffd700;
-            margin-bottom: 40px;
+        .stats-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 40px 20px;
         }
-        .guitar-icon {
-            font-size: 100px;
-            margin: 20px 0;
+        .stat-card {
+            background: #1a1a1a;
+            border: 1px solid #333;
+            padding: 20px;
+            width: 250px;
+            border-radius: 15px;
+            transition: 0.3s;
         }
-        .message-box {
-            background: rgba(255, 255, 255, 0.1);
-            border: 2px solid #ff4500;
+        .stat-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-10px);
+        }
+        .stat-card h2 { color: var(--gold); margin-bottom: 5px; }
+        .message {
+            max-width: 700px;
+            margin: 40px auto;
+            background: rgba(255,255,255,0.05);
             padding: 30px;
-            display: inline-block;
-            border-radius: 10px;
-            max-width: 600px;
+            border-left: 10px solid var(--primary);
+            font-style: italic;
+            font-size: 1.2rem;
+        }
+        .footer {
+            padding: 50px;
+            background: #000;
+            font-size: 0.9rem;
+            color: #666;
         }
         .btn {
             display: inline-block;
-            margin-top: 30px;
+            background: var(--primary);
+            color: #000;
             padding: 15px 30px;
-            background-color: #ff4500;
-            color: white;
             text-decoration: none;
             font-weight: bold;
-            border-radius: 50px;
-            transition: 0.3s;
-        }
-        .btn:hover {
-            background-color: #fff;
-            color: #ff4500;
+            border-radius: 5px;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <div class="guitar-icon">🎸</div>
-        <h1>Rock On!</h1>
-        <p class="birthday-text">Happy Birthday to the Greatest Guitarist in Dhaka!</p>
-        
-        <div class="message-box">
-            <p>"May your strings never break, your amp always stay at 11, and your riffs stay legendary."</p>
-            <p><strong>- From your best friend</strong></p>
-        </div>
+    <section class="hero">
+        <div style="font-size: 50px;">⚡🎸⚽</div>
+        <h1>10th April: THE CAPTAIN'S DAY</h1>
+        <p style="font-size: 1.5rem; color: var(--gold);">Happy Birthday to a Real One!</p>
+    </section>
 
-        <br>
-        <a href="https://www.youtube.com/watch?v=xvE6O5AAbf4" target="_blank" class="btn">PLAY BIRTHDAY RIFF</a>
+    <div class="stats-container">
+        <div class="stat-card">
+            <h2>TEAM</h2>
+            <p>Thunderstrike FC</p>
+        </div>
+        <div class="stat-card">
+            <h2>ACADEMICS</h2>
+            <p>Class 10 | Commerce<br>National Ideal School</p>
+        </div>
+        <div class="stat-card">
+            <h2>STATUS</h2>
+            <p>Focused & Career-Oriented</p>
+        </div>
     </div>
 
-    <footer style="padding: 20px; font-size: 0.8rem;">
-        Built for a legend | April 2026
+    <div class="message">
+        "To the guy who kills it on the football pitch and handles the business of life like a pro. Keep that focus, stay kind, and keep shredding those goals (and maybe some guitar riffs too!)"
+    </div>
+
+    <a href="https://www.youtube.com/watch?v=xvE6O5AAbf4" class="btn">PLAY CHAMPION ANTHEM</a>
+
+    <footer class="footer">
+        Designed for a Legend | National Ideal School | April 10, 2026
     </footer>
 
 </body>
