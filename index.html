@@ -3,24 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HBD Rifat Shikdar</title>
+    <title>Rifat Shikdar | Personal Site</title>
     <style>
-        body { background: #050505; color: white; font-family: sans-serif; margin: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 100vh; text-align: center; }
-        .bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url('bg.jpg') center/cover; opacity: 0.3; z-index: -1; }
-        h1 { font-size: 3.5rem; margin: 0; color: #00d4ff; }
-        p { letter-spacing: 5px; color: #ffd700; font-weight: bold; }
-        nav { position: fixed; bottom: 30px; display: flex; gap: 15px; }
-        nav a { text-decoration: none; color: white; background: rgba(255,255,255,0.1); padding: 10px 20px; border-radius: 50px; font-size: 0.8rem; border: 1px solid #333; }
+        :root {
+            --accent: #00d4ff;
+            --secondary: #ffd700;
+        }
+        body { 
+            background: #050505; 
+            color: white; 
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; 
+            margin: 0; 
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+        .bg { 
+            position: fixed; 
+            top: 0; left: 0; width: 100%; height: 100%; 
+            background: url('bg.jpg') center/cover; 
+            opacity: 0.25; 
+            z-index: -1; 
+        }
+        
+        .container {
+            text-align: left;
+            width: 85%;
+            max-width: 500px;
+        }
+
+        .intro {
+            color: var(--accent);
+            font-family: 'Courier New', monospace;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        h1 { 
+            font-size: 3.5rem; 
+            margin: 0; 
+            line-height: 1;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .description {
+            margin-top: 20px;
+            font-size: 1rem;
+            color: #aaa;
+            line-height: 1.6;
+            border-left: 2px solid var(--secondary);
+            padding-left: 15px;
+        }
+
+        /* Portfolio Navigation */
+        .menu {
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: white;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 18px;
+            border-radius: 12px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: 0.3s;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .menu a:hover {
+            background: rgba(0, 212, 255, 0.1);
+            border-color: var(--accent);
+            transform: translateX(5px);
+        }
+
+        .menu a::after {
+            content: '→';
+            color: var(--accent);
+        }
+
+        .status-bar {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            font-size: 0.7rem;
+            color: var(--secondary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
     </style>
 </head>
 <body>
     <div class="bg"></div>
-    <p>APRIL 10</p>
-    <h1>RIFAT SHIKDAR</h1>
-    <nav>
-        <a href="family.html">Family</a>
-        <a href="career.html">Career</a>
-        <a href="message.html">Message</a>
-    </nav>
+    <div class="status-bar">Online • 10.04.26</div>
+
+    <div class="container">
+        <div class="intro">Hi, it's Rifat —</div>
+        <h1>RIFAT<br>SHIKDAR</h1>
+        
+        <div class="description">
+            Captain of Thunderstrike FC. Commerce Student at National Ideal School. Focused on the future.
+        </div>
+
+        <nav class="menu">
+            <a href="family.html">The Family Tree</a>
+            <a href="career.html">Career & Ambition</a>
+            <a href="message.html">Personal Message</a>
+        </nav>
+    </div>
 </body>
 </html>
