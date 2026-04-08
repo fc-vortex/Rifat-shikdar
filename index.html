@@ -126,44 +126,36 @@
     <div class="bg"></div>
     <div class="status-bar">Online • 10.04.26</div>
 
+    <div id="music-container">
     <button onclick="togglePhonk()" id="phonk-btn">⚡ ACTIVATE PHONK</button>
-    <div id="player-wrapper" style="display:none;">
-        <iframe id="phonk-player" width="1" height="1" src="https://www.youtube.com/embed/w-sQRS-Lc9k?enablejsapi=1" frameborder="0"></iframe>
+    
+    <div id="player-wrapper" style="position: absolute; visibility: hidden; width: 1px; height: 1px;">
+        <iframe id="phonk-player" 
+                width="1" height="1" 
+                src="https://www.youtube.com/embed/w-sQRS-Lc9k?enablejsapi=1&autoplay=0&controls=0&origin=https://github.com" 
+                frameborder="0" 
+                allow="autoplay">
+        </iframe>
     </div>
+</div>
 
-    <div class="container">
-        <div class="intro">Hi, it's Rifat —</div>
-        <h1>RIFAT<br>SHIKDAR</h1>
+<script>
+    var phonkPlaying = false;
+    function togglePhonk() {
+        var player = document.getElementById('phonk-player');
+        var btn = document.getElementById('phonk-btn');
         
-        <div class="description">
-            Captain of Thunderstrike FC. Commerce Student at National Ideal School. Focused on the future.
-        </div>
-
-        <nav class="menu">
-            <a href="family.html">The Family Tree</a>
-            <a href="career.html">Career & Ambition</a>
-            <a href="message.html">Personal Message</a>
-        </nav>
-    </div>
-
-    <script>
-        var phonkPlaying = false;
-        function togglePhonk() {
-            var player = document.getElementById('phonk-player');
-            var btn = document.getElementById('phonk-btn');
-            
-            if (!phonkPlaying) {
-                player.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
-                btn.innerHTML = "🔊 SYSTEM ACTIVE";
-                btn.style.background = "#ffd700"; 
-                phonkPlaying = true;
-            } else {
-                player.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
-                btn.innerHTML = "⚡ ACTIVATE PHONK";
-                btn.style.background = "#00d4ff";
-                phonkPlaying = false;
-            }
+        // This sends a direct play command to the YouTube API
+        if (!phonkPlaying) {
+            player.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+            btn.innerHTML = "🔊 SYSTEM ACTIVE";
+            btn.style.background = "#ffd700"; 
+            phonkPlaying = true;
+        } else {
+            player.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+            btn.innerHTML = "⚡ ACTIVATE PHONK";
+            btn.style.background = "#00d4ff";
+            phonkPlaying = false;
         }
-    </script>
-</body>
-</html>
+    }
+</script>
