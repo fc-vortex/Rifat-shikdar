@@ -1,1 +1,40 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Tree | Rifat Shikdar</title>
+    <style>
+        body { background: #050505; color: white; font-family: sans-serif; margin: 0; padding: 40px 20px; text-align: center; }
+        .bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url('bg.jpg') center/cover; opacity: 0.1; z-index: -1; }
+        h1 { color: #00d4ff; font-size: 2rem; margin-bottom: 40px; letter-spacing: 2px; }
+        .family-grid { display: grid; grid-template-columns: 1fr; gap: 20px; max-width: 400px; margin: 0 auto; }
+        .card { background: rgba(255,255,255,0.05); border: 1px solid #222; border-radius: 20px; padding: 20px; display: flex; align-items: center; gap: 20px; }
+        .card img { width: 70px; height: 70px; border-radius: 50%; object-fit: cover; border: 2px solid #ffd700; }
+        .info { text-align: left; }
+        .info h3 { margin: 0; font-size: 1.1rem; }
+        .info p { margin: 5px 0 0; font-size: 0.8rem; color: #888; text-transform: uppercase; }
+        .back { display: inline-block; margin-top: 50px; color: #00d4ff; text-decoration: none; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <div class="bg"></div>
+    <h1>THE SHIKDAR LINEAGE</h1>
+    <div class="family-grid">
+        <div class="card">
+            <img src="father.jpg" alt="Father">
+            <div class="info"><h3>Father</h3><p>Support & Guidance</p></div>
+        </div>
+        <div class="card">
+            <img src="mother.jpg" alt="Mother">
+            <div class="info"><h3>Mother</h3><p>Care & Strength</p></div>
+        </div>
+        <div class="card">
+            <img src="shifat.jpg" alt="Shifat">
+            <div class="info"><h3>Shifat Shikdar</h3><p>Brother & Partner</p></div>
+        </div>
+    </div>
+    <a href="index.html" class="back">← RETURN TO HOME</a>
+</body>
+</html>
