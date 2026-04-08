@@ -122,3 +122,32 @@
     </div>
 </body>
 </html>
+<div id="music-container" style="position: fixed; top: 20px; right: 20px; z-index: 2000;">
+    <button onclick="togglePhonk()" id="phonk-btn" style="background: #00d4ff; color: #000; border: none; padding: 12px 20px; border-radius: 8px; cursor: pointer; font-size: 0.75rem; font-weight: 900; letter-spacing: 1px; box-shadow: 0 0 15px rgba(0, 212, 255, 0.5); font-family: sans-serif;">
+        ⚡ ACTIVATE PHONK
+    </button>
+    
+    <div id="player-wrapper" style="display:none;">
+        <iframe id="phonk-player" width="1" height="1" src="https://www.youtube.com/embed/w-sQRS-Lc9k?enablejsapi=1" frameborder="0"></iframe>
+    </div>
+</div>
+
+<script>
+    var phonkPlaying = false;
+    function togglePhonk() {
+        var player = document.getElementById('phonk-player');
+        var btn = document.getElementById('phonk-btn');
+        
+        if (!phonkPlaying) {
+            player.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+            btn.innerHTML = "🔊 SYSTEM ACTIVE";
+            btn.style.background = "#ffd700"; // Gold when active
+            phonkPlaying = true;
+        } else {
+            player.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+            btn.innerHTML = "⚡ ACTIVATE PHONK";
+            btn.style.background = "#00d4ff";
+            phonkPlaying = false;
+        }
+    }
+</script>
