@@ -3,130 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rifat Shikdar | The Legend</title>
+    <title>HBD Rifat Shikdar</title>
     <style>
         :root {
             --primary: #00d4ff; 
             --gold: #ffd700;
-            --dark: #0a0a0a;
-            --card-bg: #161616;
+            --dark: #050505;
+            --card-bg: rgba(20, 20, 20, 0.9);
         }
-        * { scroll-behavior: smooth; } /* Makes the scrolling look smooth */
+        * { scroll-behavior: smooth; box-sizing: border-box; } 
+        
         body {
             background-color: var(--dark);
             color: #ffffff;
-            font-family: 'Segoe UI', sans-serif;
+            font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
             margin: 0;
-            text-align: center;
+            overflow-x: hidden;
         }
 
-        /* Navigation Bar */
+        /* The Background Image you uploaded */
+        .fixed-bg {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: url('bg.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.25; /* Adjusted so he can see himself but still read the text */
+            z-index: -1;
+        }
+
+        /* Mobile-Friendly Fixed Navigation */
         nav {
             position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(10, 10, 10, 0.9);
-            padding: 15px 0;
+            bottom: 20px; /* Moved to bottom for easy thumb-reach on mobile */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(10px);
+            padding: 12px;
             z-index: 1000;
-            border-bottom: 1px solid #333;
+            border-radius: 50px;
+            display: flex;
+            justify-content: space-around;
+            border: 1px solid var(--primary);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 15px;
+            font-size: 0.75rem;
             font-weight: bold;
-            font-size: 0.9rem;
             text-transform: uppercase;
-            transition: 0.3s;
+            text-align: center;
         }
         nav a:hover { color: var(--primary); }
 
-        section { padding: 100px 20px; min-height: 60vh; }
-
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), 
-                        url('https://images.unsplash.com/photo-1550291652-6ea9114a47b1?q=80&w=1200');
-            background-size: cover;
+        /* Sections spacing */
+        section { 
+            padding: 100px 25px; 
+            min-height: 100vh; /* Each section takes full screen height */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
-        
-        .name-highlight { color: var(--primary); font-size: 4rem; display: block; text-shadow: 0 0 15px rgba(0, 212, 255, 0.5); }
 
-        /* Content Boxes */
+        .hero h1 { font-size: 2.8rem; margin: 0; line-height: 1.1; }
+        .name-highlight { color: var(--primary); font-size: 3.5rem; display: block; font-weight: 900; }
+
         .content-box {
-            max-width: 800px;
-            margin: 20px auto;
             background: var(--card-bg);
-            padding: 40px;
-            border-radius: 20px;
-            border: 1px solid #222;
-        }
-
-        h2 { color: var(--gold); text-transform: uppercase; letter-spacing: 2px; }
-
-        .big-message {
-            font-size: 1.5rem;
-            line-height: 1.8;
-            color: #ddd;
+            padding: 35px 25px;
+            border-radius: 25px;
+            border: 1px solid #333;
             text-align: left;
-            border-left: 5px solid var(--primary);
-            padding-left: 20px;
+            margin-top: 20px;
         }
 
-        footer { padding: 40px; color: #444; font-size: 0.8rem; }
+        h2 { color: var(--gold); font-size: 1.5rem; text-transform: uppercase; border-bottom: 2px solid var(--primary); display: inline-block; margin-bottom: 25px; }
+
+        .big-message { font-size: 1.2rem; line-height: 1.7; color: #eee; }
+        
+        .footer { padding: 100px 20px 150px; color: #444; font-size: 0.8rem; text-align: center; }
     </style>
 </head>
 <body>
 
+    <div class="fixed-bg"></div>
+
     <nav>
-        <a href="#family">Family Tree</a>
-        <a href="#career">Career Path</a>
-        <a href="#message">The Huge Message</a>
+        <a href="#family">🌳 Family</a>
+        <a href="#career">💼 Career</a>
+        <a href="#message">✉️ Message</a>
     </nav>
 
     <section class="hero">
-        <p style="color: var(--gold); font-weight: bold; margin-top: 50px;">APRIL 10, 2026</p>
-        <h1>Happy Birthday</h1>
+        <p style="color: var(--gold); font-weight: bold; letter-spacing: 4px;">APRIL 10</p>
+        <h1>HAPPY BIRTHDAY</h1>
         <span class="name-highlight">RIFAT SHIKDAR</span>
-        <p>Captain of Thunderstrike | Commerce Scholar</p>
+        <p style="font-size: 1.1rem; color: #bbb;">Captain of Thunderstrike • Class 10</p>
+        <div style="margin-top: 30px; font-size: 2rem;">🎸 ⚽ ⚡</div>
     </section>
 
     <section id="family">
-        <h2>🌳 The Family Tree</h2>
         <div class="content-box">
-            <p>This section is dedicated to the roots that keep Rifat grounded.</p>
-            <ul style="list-style: none; padding: 0; font-size: 1.2rem; line-height: 2;">
-                <li>🛡️ <strong>The Shikdar Lineage</strong></li>
-                <li>🏠 <strong>Home:</strong> Dhaka, Bangladesh</li>
-                <li>❤️ <em>[Add family member names here later if you want]</em></li>
-            </ul>
+            <h2>The Roots</h2>
+            <p style="font-size: 1.1rem; color: var(--primary);">The Shikdar Family</p>
+            <p>A legacy of kindness and strength. Based in Dhaka, growing towards greatness.</p>
+            <p style="font-style: italic; color: #888; font-size: 0.9rem; margin-top: 20px;">Scroll down to see the path...</p>
         </div>
     </section>
 
-    <section id="career" style="background-color: #0d0d0d;">
-        <h2>💼 Career & Ambition</h2>
+    <section id="career">
         <div class="content-box">
-            <p style="font-size: 1.2rem;">Rifat is not just a student; he is a future leader in the world of Commerce.</p>
-            <p><strong>Current Goal:</strong> Mastering Class 10 at National Ideal School.</p>
-            <p><strong>Next Step:</strong> Leading Thunderstrike to victory and building a professional legacy.</p>
-            <p><em>"Focus is the key to success, and Rifat has plenty of it."</em></p>
+            <h2>Career Path</h2>
+            <p><strong>Institution:</strong> National Ideal School</p>
+            <p><strong>Stream:</strong> Commerce</p>
+            <p><strong>Goal:</strong> Leading with focus and integrity.</p>
+            <hr style="border: 0; border-top: 1px solid #333; margin: 20px 0;">
+            <p>Rifat handles his future with the same precision he uses on the pitch. A natural leader.</p>
         </div>
     </section>
 
     <section id="message">
-        <h2>✉️ A Message for Rifat</h2>
         <div class="content-box">
+            <h2>The Big Message</h2>
             <div class="big-message">
-                Rifat Shikdar, <br><br>
-                Happy 15th Birthday, brother! On this special day, I wanted to build something that reflects who you are. From the football pitch with Thunderstrike to the classrooms of National Ideal, you have always shown what it means to be kind and focused. <br><br>
-                Being a Commerce student is all about understanding value, and I hope you know how much value you bring to your friends and family. Keep your head in the game, keep your guitar tuned, and never stop chasing those big dreams. The world is waiting for what you're going to build next. <br><br>
-                Rock on and keep winning! 🤘⚽
+                Rifat Shikdar,<br><br>
+                Happy 15th Birthday, brother! I built this because someone like you deserves more than just a simple text. <br><br>
+                From leading Thunderstrike to grinding in the Commerce department, you show everyone what true focus looks like. Keep that kind heart and that "never-give-up" energy. <br><br>
+                The world is yours to conquer. Rock on! 🤘
             </div>
         </div>
     </section>
 
-    <footer>
+    <div class="footer">
         HBD RIFAT SHIKDAR | PRODUCED IN DHAKA, 2026
-    </footer>
+    </div>
 
 </body>
 </html>
