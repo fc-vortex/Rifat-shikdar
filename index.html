@@ -5,141 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HBD Rifat Shikdar</title>
     <style>
-        :root {
-            --primary: #00d4ff; 
-            --gold: #ffd700;
-            --dark: #050505;
-            --card-bg: rgba(20, 20, 20, 0.9);
-        }
-        * { scroll-behavior: smooth; box-sizing: border-box; } 
-        
-        body {
-            background-color: var(--dark);
-            color: #ffffff;
-            font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
-            margin: 0;
-            overflow-x: hidden;
-        }
-
-        /* The Background Image you uploaded */
-        .fixed-bg {
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background-image: url('bg.jpg');
-            background-size: cover;
-            background-position: center;
-            opacity: 0.25; /* Adjusted so he can see himself but still read the text */
-            z-index: -1;
-        }
-
-        /* Mobile-Friendly Fixed Navigation */
-        nav {
-            position: fixed;
-            bottom: 20px; /* Moved to bottom for easy thumb-reach on mobile */
-            left: 50%;
-            transform: translateX(-50%);
-            width: 90%;
-            background: rgba(0, 0, 0, 0.85);
-            backdrop-filter: blur(10px);
-            padding: 12px;
-            z-index: 1000;
-            border-radius: 50px;
-            display: flex;
-            justify-content: space-around;
-            border: 1px solid var(--primary);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 0.75rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            text-align: center;
-        }
-        nav a:hover { color: var(--primary); }
-
-        /* Sections spacing */
-        section { 
-            padding: 100px 25px; 
-            min-height: 100vh; /* Each section takes full screen height */
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .hero h1 { font-size: 2.8rem; margin: 0; line-height: 1.1; }
-        .name-highlight { color: var(--primary); font-size: 3.5rem; display: block; font-weight: 900; }
-
-        .content-box {
-            background: var(--card-bg);
-            padding: 35px 25px;
-            border-radius: 25px;
-            border: 1px solid #333;
-            text-align: left;
-            margin-top: 20px;
-        }
-
-        h2 { color: var(--gold); font-size: 1.5rem; text-transform: uppercase; border-bottom: 2px solid var(--primary); display: inline-block; margin-bottom: 25px; }
-
-        .big-message { font-size: 1.2rem; line-height: 1.7; color: #eee; }
-        
-        .footer { padding: 100px 20px 150px; color: #444; font-size: 0.8rem; text-align: center; }
+        body { background: #050505; color: white; font-family: sans-serif; margin: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 100vh; text-align: center; }
+        .bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url('bg.jpg') center/cover; opacity: 0.3; z-index: -1; }
+        h1 { font-size: 3.5rem; margin: 0; color: #00d4ff; }
+        p { letter-spacing: 5px; color: #ffd700; font-weight: bold; }
+        nav { position: fixed; bottom: 30px; display: flex; gap: 15px; }
+        nav a { text-decoration: none; color: white; background: rgba(255,255,255,0.1); padding: 10px 20px; border-radius: 50px; font-size: 0.8rem; border: 1px solid #333; }
     </style>
 </head>
 <body>
-
-    <div class="fixed-bg"></div>
-
+    <div class="bg"></div>
+    <p>APRIL 10</p>
+    <h1>RIFAT SHIKDAR</h1>
     <nav>
-        <a href="#family">🌳 Family</a>
-        <a href="#career">💼 Career</a>
-        <a href="#message">✉️ Message</a>
+        <a href="family.html">Family</a>
+        <a href="career.html">Career</a>
+        <a href="message.html">Message</a>
     </nav>
-
-    <section class="hero">
-        <p style="color: var(--gold); font-weight: bold; letter-spacing: 4px;">APRIL 10</p>
-        <h1>HAPPY BIRTHDAY</h1>
-        <span class="name-highlight">RIFAT SHIKDAR</span>
-        <p style="font-size: 1.1rem; color: #bbb;">Captain of Thunderstrike • Class 10</p>
-        <div style="margin-top: 30px; font-size: 2rem;">🎸 ⚽ ⚡</div>
-    </section>
-
-    <section id="family">
-        <div class="content-box">
-            <h2>The Roots</h2>
-            <p style="font-size: 1.1rem; color: var(--primary);">The Shikdar Family</p>
-            <p>A legacy of kindness and strength. Based in Dhaka, growing towards greatness.</p>
-            <p style="font-style: italic; color: #888; font-size: 0.9rem; margin-top: 20px;">Scroll down to see the path...</p>
-        </div>
-    </section>
-
-    <section id="career">
-        <div class="content-box">
-            <h2>Career Path</h2>
-            <p><strong>Institution:</strong> National Ideal School</p>
-            <p><strong>Stream:</strong> Commerce</p>
-            <p><strong>Goal:</strong> Leading with focus and integrity.</p>
-            <hr style="border: 0; border-top: 1px solid #333; margin: 20px 0;">
-            <p>Rifat handles his future with the same precision he uses on the pitch. A natural leader.</p>
-        </div>
-    </section>
-
-    <section id="message">
-        <div class="content-box">
-            <h2>The Big Message</h2>
-            <div class="big-message">
-                Rifat Shikdar,<br><br>
-                Happy 15th Birthday, brother! I built this because someone like you deserves more than just a simple text. <br><br>
-                From leading Thunderstrike to grinding in the Commerce department, you show everyone what true focus looks like. Keep that kind heart and that "never-give-up" energy. <br><br>
-                The world is yours to conquer. Rock on! 🤘
-            </div>
-        </div>
-    </section>
-
-    <div class="footer">
-        HBD RIFAT SHIKDAR | PRODUCED IN DHAKA, 2026
-    </div>
-
 </body>
 </html>
